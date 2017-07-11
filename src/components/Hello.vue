@@ -20,15 +20,17 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue';
+import Component from 'vue-class-component';
+
+@Component({
   name: 'hello',
-  data() {
-    return {
-      msg: 'Welcome to Your Vue.js App',
-    };
-  },
-};
+})
+export default class Hello extends Vue {
+
+  msg: string = 'Welcome to Your Vue.js App';
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
